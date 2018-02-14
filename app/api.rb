@@ -10,15 +10,13 @@ module Post
         n  = Random.new
         random_number = n.rand
         if random_number > 0.5
-          puts random_number
-          puts 'dupa'
+          puts 'Post updated!'
           {
             post_body: params[:post_body],
             user_id: params[:user_id]
           }
         else
-          puts random_number
-          puts 'error'
+          puts 'Error (500)!'
           error! 'Server error', 500
         end
       end
