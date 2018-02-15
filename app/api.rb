@@ -7,7 +7,7 @@ module Post
        requires :user_id, type: Integer
       end
       post do
-        n  = Random.new
+        n = Random.new
         random_number = n.rand
         if random_number > 0.5
           puts 'Post updated!'
